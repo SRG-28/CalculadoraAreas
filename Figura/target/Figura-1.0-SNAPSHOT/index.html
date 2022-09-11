@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script type="text/javascript" src="js/vlidacion.js"></script>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="img/math.jpg"/>
+        <hgroup>
+            <h1>Área de cuadriláteros y triángulos</h1>   
+        </hgroup>
+        </div>
+    </header>
+    <section>
+        <form name="formulario1" action="SFigura" method="POST">
+            <fieldset>
+            <table class="form-group table">
+                <tr>Altura <input type="number" class="altura" name = "altura" id="altura" required placeholder="Escriba la base"/></tr>
+                <tr>Base<input type="number" class="base" name = "base" id="base" required placeholder="Escriba la altura"/></tr>
+                <tr>
+                    Resultado <input type="number" class="result" name = "result " id="result" readonly />
+                </tr>
+            </table>
+            </fieldset>
+          
+            <div id="figura">
+                <fieldset>
+                    <label>
+                        Seleccione el nombre de la figura ha ser evaluada
+                    </label>
+                    <select name="figuras" id="figuras" size="6">
+                        <option value="rectangulo" onclick="ARectangulo()"> Rectangulo  </option>
+                        <option value="romboide" onclick="ARomboide()">Romboide</option>
+                        <option value="rombo" onclick="ARombo()">Rombo</option>
+                        <option value="trapecio" onclick="ATrapecio()">Trapecio</option>
+                        <option value="triangulo" selected onclick="ATriangulo()"> Triangulo </option>
+                        <option value="cuadrado" onclick="ACuadrado()">Cuadrado</option>
+                      </select>
+                </fieldset>
+            </div>
+
+            <div>
+                <span>
+                    Presione enviar para guardar los datos
+                </span>
+                <fieldset>
+                    <input type="submit" value="Enviar" name="btnEnviar" class="btn btn-success"> 
+                    <input type="reset" value="Limpiar formulario" name="btnLimpiar"> 
+                </fieldset>
+            </div>
+        </form>
+    </section>
+   
+</body>
+</html>
